@@ -1,0 +1,22 @@
+# Rust build output and profiling files.
+target/
+**/*.rs.bk
+*.profraw
+*.profdata
+
+# Local editor history and temporary files.
+.history/
+*.swp
+*.swo
+*~
+
+# Local environment files. Keep example files in Git.
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Operating system files.
+.DS_Store
+Thumbs.db
+Desktop.ini
