@@ -1,0 +1,21 @@
+{
+    "frames":  [
+                   {
+                       "truth":  null,
+                       "timestamp":  0,
+                       "file":  "000000.pgm",
+                       "id":  0
+                   },
+                   {
+                       "truth":  null,
+                       "timestamp":  200000,
+                       "file":  "000001.pgm",
+                       "id":  1
+                   }
+               ],
+    "version":  1,
+    "size":  [
+                 1448,
+                 1086
+             ]
+}

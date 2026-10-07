@@ -3,6 +3,7 @@ target/
 **/*.rs.bk
 *.profraw
 *.profdata
+fly-tracker.log
 
 # Local editor history and temporary files.
 .history/
@@ -20,3 +21,9 @@ target/
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Local safety runtime, model assets, and evaluation fixtures.
+.venv-safety/
+.test-dist/
+models/
+__pycache__/

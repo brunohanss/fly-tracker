@@ -1,0 +1,4 @@
+# Versions validated in the local Python 3.12 environment.
+ncnn==1.0.20260526
+numpy==2.5.3
+Pillow==12.3.0

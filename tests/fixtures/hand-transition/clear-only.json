@@ -1,0 +1,259 @@
+{
+    "frames":  [
+                   {
+                       "truth":  {
+                                     "targets":  [
+                                                     {
+                                                         "position":  [
+                                                                          441,
+                                                                          255
+                                                                      ],
+                                                         "id":  1,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          559,
+                                                                          260
+                                                                      ],
+                                                         "id":  2,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          761,
+                                                                          311
+                                                                      ],
+                                                         "id":  3,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          777,
+                                                                          332
+                                                                      ],
+                                                         "id":  4,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          546,
+                                                                          379
+                                                                      ],
+                                                         "id":  5,
+                                                         "visible":  true
+                                                     }
+                                                 ],
+                                     "hazard":  null
+                                 },
+                       "timestamp":  0,
+                       "file":  "000000.pgm",
+                       "id":  0
+                   },
+                   {
+                       "truth":  {
+                                     "targets":  [
+                                                     {
+                                                         "position":  [
+                                                                          441,
+                                                                          255
+                                                                      ],
+                                                         "id":  1,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          559,
+                                                                          260
+                                                                      ],
+                                                         "id":  2,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          761,
+                                                                          311
+                                                                      ],
+                                                         "id":  3,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          777,
+                                                                          332
+                                                                      ],
+                                                         "id":  4,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          546,
+                                                                          379
+                                                                      ],
+                                                         "id":  5,
+                                                         "visible":  true
+                                                     }
+                                                 ],
+                                     "hazard":  null
+                                 },
+                       "timestamp":  200000,
+                       "file":  "000000.pgm",
+                       "id":  1
+                   },
+                   {
+                       "truth":  {
+                                     "targets":  [
+                                                     {
+                                                         "position":  [
+                                                                          441,
+                                                                          255
+                                                                      ],
+                                                         "id":  1,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          559,
+                                                                          260
+                                                                      ],
+                                                         "id":  2,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          761,
+                                                                          311
+                                                                      ],
+                                                         "id":  3,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          777,
+                                                                          332
+                                                                      ],
+                                                         "id":  4,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          546,
+                                                                          379
+                                                                      ],
+                                                         "id":  5,
+                                                         "visible":  true
+                                                     }
+                                                 ],
+                                     "hazard":  null
+                                 },
+                       "timestamp":  400000,
+                       "file":  "000000.pgm",
+                       "id":  2
+                   },
+                   {
+                       "truth":  {
+                                     "targets":  [
+                                                     {
+                                                         "position":  [
+                                                                          441,
+                                                                          255
+                                                                      ],
+                                                         "id":  1,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          559,
+                                                                          260
+                                                                      ],
+                                                         "id":  2,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          761,
+                                                                          311
+                                                                      ],
+                                                         "id":  3,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          777,
+                                                                          332
+                                                                      ],
+                                                         "id":  4,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          546,
+                                                                          379
+                                                                      ],
+                                                         "id":  5,
+                                                         "visible":  true
+                                                     }
+                                                 ],
+                                     "hazard":  null
+                                 },
+                       "timestamp":  600000,
+                       "file":  "000000.pgm",
+                       "id":  3
+                   },
+                   {
+                       "truth":  {
+                                     "targets":  [
+                                                     {
+                                                         "position":  [
+                                                                          441,
+                                                                          255
+                                                                      ],
+                                                         "id":  1,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          559,
+                                                                          260
+                                                                      ],
+                                                         "id":  2,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          761,
+                                                                          311
+                                                                      ],
+                                                         "id":  3,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          777,
+                                                                          332
+                                                                      ],
+                                                         "id":  4,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          546,
+                                                                          379
+                                                                      ],
+                                                         "id":  5,
+                                                         "visible":  true
+                                                     }
+                                                 ],
+                                     "hazard":  null
+                                 },
+                       "timestamp":  800000,
+                       "file":  "000000.pgm",
+                       "id":  4
+                   }
+               ],
+    "version":  1,
+    "size":  [
+                 1448,
+                 1086
+             ]
+}

@@ -1,6 +1,12 @@
 [package]
 name = "telemetry"
 version = "0.1.0"
-edition = "2024"
+edition.workspace = true
+rust-version.workspace = true
 
 [dependencies]
+fly_core = { package = "core", path = "../core" }
+aiming = { path = "../aiming" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true

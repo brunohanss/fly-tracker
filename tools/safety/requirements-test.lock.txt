@@ -1,0 +1,12 @@
+certifi==2026.7.22
+charset-normalizer==3.5.2
+colorama==0.4.6
+idna==3.20
+ncnn==1.0.20260526
+numpy==2.5.3
+opencv-python==5.0.0.93
+pillow==12.3.0
+portalocker==4.4.0
+requests==2.34.2
+tqdm==4.70.1
+urllib3==2.8.0

@@ -1,0 +1,7 @@
+Tool: built-in image_gen, edit mode.
+Edit target: clear.png, from the existing generated room fixture.
+Selected prompt:
+
+Edit target: this exact supplied monochrome room. Add one realistic recognizable golden retriever dog on the bottom-right floor next to the basket, small enough that its entire head starts BELOW pixel row 690 in this 1448x1086 image. Its head should be around x=1120,y=750, feet around x=1150,y=1030. It can be lying down with head raised. The dog MUST occupy ONLY the lower section y>690. Do not place any dog pixel above y=690; upper wall must remain unchanged. Preserve every existing pixel in the upper wall, especially the five tiny stationary black flies at (503,126),(1059,144),(1014,307),(602,460),(1100,583). Keep original resolution1448x1086 and framing, same room and grayscale. No humans,no cats,no text. All five flies must remain visible and fixed. This is a generated regression smoke image.
+
+Validation: all five targets remain visible within a 6-pixel annotation tolerance and keep their track IDs across the transition. Exact pixel identity between the two generated scene states is not asserted. Images repeat identically within each five-frame phase.

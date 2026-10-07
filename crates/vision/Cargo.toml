@@ -1,6 +1,10 @@
 [package]
 name = "vision"
 version = "0.1.0"
-edition = "2024"
+edition.workspace = true
+rust-version.workspace = true
 
 [dependencies]
+fly_core = { package = "core", path = "../core" }
+camera = { path = "../camera" }
+thiserror.workspace = true

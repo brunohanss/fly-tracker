@@ -1,0 +1,829 @@
+{
+    "frames":  [
+                   {
+                       "truth":  {
+                                     "targets":  [
+                                                     {
+                                                         "position":  [
+                                                                          514,
+                                                                          164
+                                                                      ],
+                                                         "id":  1,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1027,
+                                                                          170
+                                                                      ],
+                                                         "id":  2,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          811,
+                                                                          222
+                                                                      ],
+                                                         "id":  3,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1204,
+                                                                          227
+                                                                      ],
+                                                         "id":  4,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          590,
+                                                                          251
+                                                                      ],
+                                                         "id":  5,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          725,
+                                                                          346
+                                                                      ],
+                                                         "id":  6,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1001,
+                                                                          401
+                                                                      ],
+                                                         "id":  7,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          504,
+                                                                          424
+                                                                      ],
+                                                         "id":  8,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1251,
+                                                                          441
+                                                                      ],
+                                                         "id":  9,
+                                                         "visible":  true
+                                                     }
+                                                 ],
+                                     "hazard":  "Human"
+                                 },
+                       "timestamp":  0,
+                       "file":  "000001.pgm",
+                       "id":  0
+                   },
+                   {
+                       "truth":  {
+                                     "targets":  [
+                                                     {
+                                                         "position":  [
+                                                                          514,
+                                                                          164
+                                                                      ],
+                                                         "id":  1,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1027,
+                                                                          170
+                                                                      ],
+                                                         "id":  2,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          811,
+                                                                          222
+                                                                      ],
+                                                         "id":  3,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1204,
+                                                                          227
+                                                                      ],
+                                                         "id":  4,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          590,
+                                                                          251
+                                                                      ],
+                                                         "id":  5,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          725,
+                                                                          346
+                                                                      ],
+                                                         "id":  6,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1001,
+                                                                          401
+                                                                      ],
+                                                         "id":  7,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          504,
+                                                                          424
+                                                                      ],
+                                                         "id":  8,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1251,
+                                                                          441
+                                                                      ],
+                                                         "id":  9,
+                                                         "visible":  true
+                                                     }
+                                                 ],
+                                     "hazard":  "Human"
+                                 },
+                       "timestamp":  200000,
+                       "file":  "000001.pgm",
+                       "id":  1
+                   },
+                   {
+                       "truth":  {
+                                     "targets":  [
+                                                     {
+                                                         "position":  [
+                                                                          514,
+                                                                          164
+                                                                      ],
+                                                         "id":  1,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1027,
+                                                                          170
+                                                                      ],
+                                                         "id":  2,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          811,
+                                                                          222
+                                                                      ],
+                                                         "id":  3,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1204,
+                                                                          227
+                                                                      ],
+                                                         "id":  4,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          590,
+                                                                          251
+                                                                      ],
+                                                         "id":  5,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          725,
+                                                                          346
+                                                                      ],
+                                                         "id":  6,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1001,
+                                                                          401
+                                                                      ],
+                                                         "id":  7,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          504,
+                                                                          424
+                                                                      ],
+                                                         "id":  8,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1251,
+                                                                          441
+                                                                      ],
+                                                         "id":  9,
+                                                         "visible":  true
+                                                     }
+                                                 ],
+                                     "hazard":  "Human"
+                                 },
+                       "timestamp":  400000,
+                       "file":  "000001.pgm",
+                       "id":  2
+                   },
+                   {
+                       "truth":  {
+                                     "targets":  [
+                                                     {
+                                                         "position":  [
+                                                                          514,
+                                                                          164
+                                                                      ],
+                                                         "id":  1,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1027,
+                                                                          170
+                                                                      ],
+                                                         "id":  2,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          811,
+                                                                          222
+                                                                      ],
+                                                         "id":  3,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1204,
+                                                                          227
+                                                                      ],
+                                                         "id":  4,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          590,
+                                                                          251
+                                                                      ],
+                                                         "id":  5,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          725,
+                                                                          346
+                                                                      ],
+                                                         "id":  6,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1001,
+                                                                          401
+                                                                      ],
+                                                         "id":  7,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          504,
+                                                                          424
+                                                                      ],
+                                                         "id":  8,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1251,
+                                                                          441
+                                                                      ],
+                                                         "id":  9,
+                                                         "visible":  true
+                                                     }
+                                                 ],
+                                     "hazard":  "Human"
+                                 },
+                       "timestamp":  600000,
+                       "file":  "000001.pgm",
+                       "id":  3
+                   },
+                   {
+                       "truth":  {
+                                     "targets":  [
+                                                     {
+                                                         "position":  [
+                                                                          514,
+                                                                          164
+                                                                      ],
+                                                         "id":  1,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1027,
+                                                                          170
+                                                                      ],
+                                                         "id":  2,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          811,
+                                                                          222
+                                                                      ],
+                                                         "id":  3,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1204,
+                                                                          227
+                                                                      ],
+                                                         "id":  4,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          590,
+                                                                          251
+                                                                      ],
+                                                         "id":  5,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          725,
+                                                                          346
+                                                                      ],
+                                                         "id":  6,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1001,
+                                                                          401
+                                                                      ],
+                                                         "id":  7,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          504,
+                                                                          424
+                                                                      ],
+                                                         "id":  8,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1251,
+                                                                          441
+                                                                      ],
+                                                         "id":  9,
+                                                         "visible":  true
+                                                     }
+                                                 ],
+                                     "hazard":  "Human"
+                                 },
+                       "timestamp":  800000,
+                       "file":  "000001.pgm",
+                       "id":  4
+                   },
+                   {
+                       "truth":  {
+                                     "targets":  [
+                                                     {
+                                                         "position":  [
+                                                                          514,
+                                                                          164
+                                                                      ],
+                                                         "id":  1,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1027,
+                                                                          170
+                                                                      ],
+                                                         "id":  2,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          811,
+                                                                          222
+                                                                      ],
+                                                         "id":  3,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1204,
+                                                                          227
+                                                                      ],
+                                                         "id":  4,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          590,
+                                                                          251
+                                                                      ],
+                                                         "id":  5,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          725,
+                                                                          346
+                                                                      ],
+                                                         "id":  6,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1001,
+                                                                          401
+                                                                      ],
+                                                         "id":  7,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          504,
+                                                                          424
+                                                                      ],
+                                                         "id":  8,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1251,
+                                                                          441
+                                                                      ],
+                                                         "id":  9,
+                                                         "visible":  true
+                                                     }
+                                                 ],
+                                     "hazard":  null
+                                 },
+                       "timestamp":  1000000,
+                       "file":  "000000.pgm",
+                       "id":  5
+                   },
+                   {
+                       "truth":  {
+                                     "targets":  [
+                                                     {
+                                                         "position":  [
+                                                                          514,
+                                                                          164
+                                                                      ],
+                                                         "id":  1,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1027,
+                                                                          170
+                                                                      ],
+                                                         "id":  2,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          811,
+                                                                          222
+                                                                      ],
+                                                         "id":  3,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1204,
+                                                                          227
+                                                                      ],
+                                                         "id":  4,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          590,
+                                                                          251
+                                                                      ],
+                                                         "id":  5,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          725,
+                                                                          346
+                                                                      ],
+                                                         "id":  6,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1001,
+                                                                          401
+                                                                      ],
+                                                         "id":  7,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          504,
+                                                                          424
+                                                                      ],
+                                                         "id":  8,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1251,
+                                                                          441
+                                                                      ],
+                                                         "id":  9,
+                                                         "visible":  true
+                                                     }
+                                                 ],
+                                     "hazard":  null
+                                 },
+                       "timestamp":  1200000,
+                       "file":  "000000.pgm",
+                       "id":  6
+                   },
+                   {
+                       "truth":  {
+                                     "targets":  [
+                                                     {
+                                                         "position":  [
+                                                                          514,
+                                                                          164
+                                                                      ],
+                                                         "id":  1,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1027,
+                                                                          170
+                                                                      ],
+                                                         "id":  2,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          811,
+                                                                          222
+                                                                      ],
+                                                         "id":  3,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1204,
+                                                                          227
+                                                                      ],
+                                                         "id":  4,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          590,
+                                                                          251
+                                                                      ],
+                                                         "id":  5,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          725,
+                                                                          346
+                                                                      ],
+                                                         "id":  6,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1001,
+                                                                          401
+                                                                      ],
+                                                         "id":  7,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          504,
+                                                                          424
+                                                                      ],
+                                                         "id":  8,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1251,
+                                                                          441
+                                                                      ],
+                                                         "id":  9,
+                                                         "visible":  true
+                                                     }
+                                                 ],
+                                     "hazard":  null
+                                 },
+                       "timestamp":  1400000,
+                       "file":  "000000.pgm",
+                       "id":  7
+                   },
+                   {
+                       "truth":  {
+                                     "targets":  [
+                                                     {
+                                                         "position":  [
+                                                                          514,
+                                                                          164
+                                                                      ],
+                                                         "id":  1,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1027,
+                                                                          170
+                                                                      ],
+                                                         "id":  2,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          811,
+                                                                          222
+                                                                      ],
+                                                         "id":  3,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1204,
+                                                                          227
+                                                                      ],
+                                                         "id":  4,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          590,
+                                                                          251
+                                                                      ],
+                                                         "id":  5,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          725,
+                                                                          346
+                                                                      ],
+                                                         "id":  6,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1001,
+                                                                          401
+                                                                      ],
+                                                         "id":  7,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          504,
+                                                                          424
+                                                                      ],
+                                                         "id":  8,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1251,
+                                                                          441
+                                                                      ],
+                                                         "id":  9,
+                                                         "visible":  true
+                                                     }
+                                                 ],
+                                     "hazard":  null
+                                 },
+                       "timestamp":  1600000,
+                       "file":  "000000.pgm",
+                       "id":  8
+                   },
+                   {
+                       "truth":  {
+                                     "targets":  [
+                                                     {
+                                                         "position":  [
+                                                                          514,
+                                                                          164
+                                                                      ],
+                                                         "id":  1,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1027,
+                                                                          170
+                                                                      ],
+                                                         "id":  2,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          811,
+                                                                          222
+                                                                      ],
+                                                         "id":  3,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1204,
+                                                                          227
+                                                                      ],
+                                                         "id":  4,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          590,
+                                                                          251
+                                                                      ],
+                                                         "id":  5,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          725,
+                                                                          346
+                                                                      ],
+                                                         "id":  6,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1001,
+                                                                          401
+                                                                      ],
+                                                         "id":  7,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          504,
+                                                                          424
+                                                                      ],
+                                                         "id":  8,
+                                                         "visible":  true
+                                                     },
+                                                     {
+                                                         "position":  [
+                                                                          1251,
+                                                                          441
+                                                                      ],
+                                                         "id":  9,
+                                                         "visible":  true
+                                                     }
+                                                 ],
+                                     "hazard":  null
+                                 },
+                       "timestamp":  1800000,
+                       "file":  "000000.pgm",
+                       "id":  9
+                   }
+               ],
+    "version":  1,
+    "size":  [
+                 1448,
+                 1086
+             ]
+}

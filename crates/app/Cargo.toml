@@ -1,6 +1,25 @@
 [package]
 name = "app"
 version = "0.1.0"
-edition = "2024"
+edition.workspace = true
+rust-version.workspace = true
+
+[features]
+nanodet-model-tests = []
 
 [dependencies]
+camera = { path = "../camera" }
+safety = { path = "../safety" }
+vision = { path = "../vision" }
+tracking = { path = "../tracking" }
+aiming = { path = "../aiming" }
+telemetry = { path = "../telemetry" }
+serde_json.workspace = true
+fly_core = { package = "core", path = "../core" }
+anyhow.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+tui = { path = "../tui" }
+
+[dev-dependencies]
+ratatui.workspace = true

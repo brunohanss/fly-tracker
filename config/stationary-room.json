@@ -1,0 +1,32 @@
+{
+    "version":  1,
+    "frame_size":  [
+                       1448,
+                       1086
+                   ],
+    "max_frame_age_us":  50000,
+    "max_safety_age_us":  50000,
+    "minimum_clear_confidence":  0.99,
+    "max_tracks":  32,
+    "max_detections":  128,
+    "telemetry_capacity":  2,
+    "history_capacity":  1024,
+    "processing":  {
+                       "stationary_detection":  true,
+                       "detection_threshold":  35,
+                       "morphology_min_neighbors":  1,
+                       "min_area":  3,
+                       "max_area":  64,
+                       "association_radius":  20.0,
+                       "confirmation_hits":  3,
+                       "remove_after_misses":  8,
+                       "velocity_time_constant_s":  0.03,
+                       "prediction_horizon_us":  10000,
+                       "detection_region":  {
+                                                "x":  470,
+                                                "y":  35,
+                                                "width":  750,
+                                                "height":  610
+                                            }
+                   }
+}
