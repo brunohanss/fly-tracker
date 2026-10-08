@@ -4,6 +4,9 @@ use thiserror::Error;
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Config {
+    /// Opt-in simulation only. This profile cannot enable physical output.
+    #[serde(default)]
+    pub pan_tilt_simulation: Option<crate::servo::PanTiltConfig>,
     #[serde(default)]
     pub safety_backend: SafetyBackend,
     #[serde(default)]
@@ -123,6 +126,7 @@ pub enum ConfigError {
 impl Default for Config {
     fn default() -> Self {
         Self {
+            pan_tilt_simulation: None,
             safety_backend: SafetyBackend::default(),
             processing: ProcessingConfig::default(),
             version: 1,
@@ -155,6 +159,9 @@ impl Config {
         Ok(config)
     }
     pub fn validate(&self) -> Result<(), ConfigError> {
+        if let Some(profile) = &self.pan_tilt_simulation {
+            profile.validate()?;
+        }
         if let SafetyBackend::Nanodet {
             python,
             worker,

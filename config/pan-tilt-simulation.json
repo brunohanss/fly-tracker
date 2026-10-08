@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "frame_size": [320, 240],
+  "max_frame_age_us": 50000,
+  "max_safety_age_us": 50000,
+  "minimum_clear_confidence": 0.99,
+  "max_tracks": 32,
+  "max_detections": 128,
+  "telemetry_capacity": 2,
+  "history_capacity": 1024,
+  "pan_tilt_simulation": {
+    "version": 1,
+    "settling_us": 100000,
+    "pan": {
+      "channel": 0,
+      "reversed": false,
+      "min_degrees": -45.0,
+      "centre_degrees": 0.0,
+      "max_degrees": 45.0,
+      "min_pulse_us": 1000,
+      "centre_pulse_us": 1500,
+      "max_pulse_us": 2000,
+      "max_speed_degrees_per_s": 90.0
+    },
+    "tilt": {
+      "channel": 1,
+      "reversed": false,
+      "min_degrees": -45.0,
+      "centre_degrees": 0.0,
+      "max_degrees": 45.0,
+      "min_pulse_us": 1000,
+      "centre_pulse_us": 1500,
+      "max_pulse_us": 2000,
+      "max_speed_degrees_per_s": 90.0
+    }
+  }
+}

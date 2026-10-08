@@ -11,6 +11,7 @@ pub struct Preview {
 }
 #[derive(Debug, Clone)]
 pub struct DashboardSnapshot {
+    pub pan_tilt: Option<aiming::pan_tilt::PanTiltSnapshot>,
     pub publication_time: std::time::Instant,
     pub system: fly_core::SystemState,
     pub aim_status: aiming::AimStatus,

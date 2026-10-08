@@ -33,7 +33,7 @@ Supported sources are seeded synthetic sequences, versioned PGM image manifests,
 
 Use [the repeated-image test](docs/repeated-image-test.md) to test stationary targets in PNG/JPEG images without hardware.
 
-See [implementation status](docs/implementation-status.md) for commands, measurements, limitations, and pending hardware work. Use `cargo run -p app -- --help` for CLI options. Hardware is not selected. Live OV9281 acquisition, physical galvo output, automatic wall calibration, and physical alignment validation remain open. NanoDet image clearance validation and Raspberry Pi deployment remain open.
+See [implementation status](docs/implementation-status.md) for commands, measurements, limitations, and pending hardware work. Use `cargo run -p app -- --help` for CLI options. The MG995/PCA9685 servo assembly is selected. Live OV9281 acquisition, physical servo or galvo output, automatic wall calibration, and physical alignment validation remain open. NanoDet image clearance validation and Raspberry Pi deployment remain open.
 
 Use [the virtual aim demo](docs/replay-image-safety.md) to cycle through stationary targets. NanoDet image inference is now selectable in replay configuration. It supplies protected-class presence scores; low scores remain uncertain and do not authorize aiming.
 
@@ -44,6 +44,12 @@ Use [the supplied human transition fixtures](tests/fixtures/human-transition/REA
 Use [the edge-hand fixtures](tests/fixtures/hand-transition/README.md) to test suppression on the first hand frame and repeated single-frame hand entry. Four control regressions run with `cargo test --workspace`; the optional model test requires actual human detection on each hand frame.
 
 All replay sources now use a [500 ms virtual aiming delay](docs/virtual-aim-delay.md). Tracking and safety continue during the wait. A lockout cancels the pending request; clear recovery starts a new wait.
+
+Use [the pan and tilt simulator](docs/pan-tilt-simulation.md) to prepare the two MG995 servos and PCA9685 module before hardware arrives. The opt-in profile shows requested and simulated angles, movement, and settling. All profile values are unmeasured. Physical output remains disabled.
+
+The [PCA9685 mock adapter](docs/pca9685-mock-adapter.md) adds verified register setup, coordinated channel writes, pulse conversion, readback, and fault tests. Run `cargo test -p hardware` to check it without hardware.
+
+Use [servo commissioning in simulation](docs/servo-commissioning.md) to generate bounded jog observations and fit a profile-bound mapping with separate pixel-error validation points.
 
 Read `AGENTS.md` before implementation. It defines the architecture, safety requirements, and milestones.
 

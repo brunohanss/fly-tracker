@@ -31,6 +31,7 @@ pub struct ReplayPipeline {
     tracker: Tracker,
     authority: SafetyAuthority,
     aimer: VirtualAimer,
+    pan_tilt: Option<aiming::pan_tilt::VirtualPanTilt>,
     calibration: Option<Calibration>,
     counters: Counters,
     latencies: Latencies,
@@ -149,6 +150,10 @@ impl ReplayPipeline {
             tracker,
             authority: SafetyAuthority::new(&config)?,
             aimer: VirtualAimer::new(scope),
+            pan_tilt: config
+                .pan_tilt_simulation
+                .map(|profile| aiming::pan_tilt::VirtualPanTilt::new(profile, scope))
+                .transpose()?,
             calibration,
             counters: Counters::default(),
             latencies: Latencies::new(capacity)?,
@@ -227,6 +232,9 @@ impl ReplayPipeline {
         self.authority = SafetyAuthority::new(&self.config)?;
         self.aimer.stop();
         self.counters = Counters::default();
+        if let Some(simulator) = &mut self.pan_tilt {
+            simulator.reset()?;
+        }
         self.latencies = Latencies::new(self.config.history_capacity)?;
         self.detection_errors = Series::new(self.config.history_capacity)?;
         self.prediction_errors = (0..4)
@@ -255,6 +263,9 @@ impl ReplayPipeline {
         self.virtual_delay.cancel();
         self.authority.shutdown();
         self.aimer.stop();
+        if let Some(simulator) = &mut self.pan_tilt {
+            simulator.stop();
+        }
     }
     pub fn step(&mut self) -> Result<bool> {
         anyhow::ensure!(!self.faulted, "Pipeline is faulted; reset is required");
@@ -283,6 +294,9 @@ impl ReplayPipeline {
             self.last_aim = None;
             self.aim_status = aiming::AimStatus::NoTarget;
             self.aimer.stop();
+            if let Some(simulator) = &mut self.pan_tilt {
+                simulator.stop();
+            }
             return Ok(false);
         }
         self.latencies.set_timestamp(self.frame.timestamp);
@@ -389,6 +403,16 @@ impl ReplayPipeline {
             self.authority.record_processing_age(start.elapsed());
         }
         let current_safety = self.authority.state_at(self.frame.timestamp);
+        if let Some(simulator) = &mut self.pan_tilt {
+            let target_missing = simulator
+                .snapshot()
+                .requested_target
+                .is_some_and(|target| !self.predictions.iter().any(|(id, _)| *id == target));
+            if target_missing || self.calibration.is_none() {
+                simulator.stop();
+            }
+            simulator.advance(&mut self.authority, self.frame.timestamp, self.frame.id)?;
+        }
         if matches!(current_safety, SafetyState::SafetyLockout(_)) {
             self.virtual_delay.cancel();
             self.aimer.stop();
@@ -446,9 +470,12 @@ impl ReplayPipeline {
                         remaining_us,
                     };
                 } else {
-                    let record =
+                    let record = if let Some(simulator) = &mut self.pan_tilt {
+                        simulator.aim(&mut self.authority, self.frame.timestamp, request)?
+                    } else {
                         self.aimer
-                            .aim(&mut self.authority, self.frame.timestamp, request)?;
+                            .aim(&mut self.authority, self.frame.timestamp, request)?
+                    };
                     self.last_aim = Some(record);
                     self.virtual_delay.cancel();
                     self.aim_status = record.suppressed_by.map_or(
@@ -486,6 +513,9 @@ impl ReplayPipeline {
                 self.virtual_delay.cancel();
                 self.counters.calibration_rejections += 1;
                 self.aim_status = aiming::AimStatus::RejectedCalibration;
+                if let Some(simulator) = &mut self.pan_tilt {
+                    simulator.stop();
+                }
             }
         } else {
             self.virtual_delay.cancel();
@@ -497,6 +527,11 @@ impl ReplayPipeline {
         }
         self.evidence_age_us = start.elapsed().as_micros().min(u128::from(u64::MAX)) as u64;
         self.last_safety = self.authority.state_at(self.frame.timestamp);
+        if matches!(self.last_safety, SafetyState::SafetyLockout(_))
+            && let Some(simulator) = &mut self.pan_tilt
+        {
+            simulator.stop();
+        }
         if self
             .frame
             .truth
@@ -694,6 +729,7 @@ impl ReplayPipeline {
         }
         let elapsed = self.clock.elapsed().as_secs_f64();
         DashboardSnapshot {
+            pan_tilt: self.pan_tilt.as_ref().map(|simulator| simulator.snapshot()),
             publication_time: Instant::now(),
             system: if self.complete {
                 fly_core::SystemState::Stopped
@@ -793,6 +829,8 @@ fn algorithm_fingerprint() -> String {
             include_str!("../../tracking/src/lib.rs"),
             include_str!("../../aiming/src/calibration.rs"),
             include_str!("../../aiming/src/lib.rs"),
+            include_str!("../../aiming/src/pan_tilt.rs"),
+            include_str!("../../core/src/servo.rs"),
             include_str!("../../camera/src/synthetic.rs"),
             include_str!("../../core/src/domain.rs"),
             include_str!("pipeline.rs"),

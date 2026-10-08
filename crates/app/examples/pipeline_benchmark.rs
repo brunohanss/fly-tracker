@@ -10,8 +10,15 @@ use telemetry::{Series, Stage, bounded, drain_latest};
 use tui::{app::Dashboard, views::ConnectedView};
 
 fn main() -> anyhow::Result<()> {
+    let simulate_servos = std::env::args()
+        .skip(1)
+        .any(|arg| arg == "--pan-tilt-simulation");
     for mode in ["headless", "normal", "stalled", "disconnected"] {
-        let config = Config::default();
+        let config = Config {
+            pan_tilt_simulation: simulate_servos
+                .then(fly_core::servo::PanTiltConfig::simulation_example),
+            ..Config::default()
+        };
         let count = 2000;
         let source = Box::new(SyntheticSource::new(
             config.frame_size,

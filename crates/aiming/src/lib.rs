@@ -1,7 +1,9 @@
 #![forbid(unsafe_code)]
 pub mod calibration;
+pub mod commissioning;
 pub mod delay;
 pub mod fit;
+pub mod pan_tilt;
 use fly_core::{FrameId, FrameTimestamp, LockoutReason, NormalizedAim, PixelPosition, TargetId};
 use safety::{EvidenceScope, SafetyAuthority};
 use serde::{Deserialize, Serialize};
@@ -9,6 +11,10 @@ use thiserror::Error;
 
 #[derive(Debug, Error)]
 pub enum AimingError {
+    #[error("Aiming device fault: {0}")]
+    DeviceFault(&'static str),
+    #[error("Invalid servo configuration: {0}")]
+    ServoConfig(#[from] fly_core::config::ConfigError),
     #[error("Calibration I/O failed: {0}")]
     Io(#[from] std::io::Error),
     #[error("Invalid calibration: {0}")]

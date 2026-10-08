@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "address": 64,
+  "oscillator_hz": 25000000.0,
+  "frequency_hz": 50.0
+}

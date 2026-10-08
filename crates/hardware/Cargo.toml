@@ -8,3 +8,11 @@ rust-version.workspace = true
 fly_core = { package = "core", path = "../core" }
 aiming = { path = "../aiming" }
 safety = { path = "../safety" }
+serde.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+camera = { path = "../camera" }
+serde_json.workspace = true
+anyhow.workspace = true
+telemetry = { path = "../telemetry" }

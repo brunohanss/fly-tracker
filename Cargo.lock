@@ -6,6 +6,7 @@ version = 4
 name = "aiming"
 version = "0.1.0"
 dependencies = [
+ "camera",
  "core",
  "safety",
  "serde",
@@ -265,8 +266,14 @@ name = "hardware"
 version = "0.1.0"
 dependencies = [
  "aiming",
+ "anyhow",
+ "camera",
  "core",
  "safety",
+ "serde",
+ "serde_json",
+ "telemetry",
+ "thiserror",
 ]
 
 [[package]]

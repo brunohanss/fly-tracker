@@ -265,6 +265,17 @@ impl ConnectedView {
         } else {
             text.push_str("No active target\n");
         }
+        if let Some(servos) = s.pan_tilt {
+            text.push_str(&format!(
+                "Pan/tilt SIMULATION {:?}{}\nSimulated pan/tilt: {:.2}/{:.2} deg\nRequested pan/tilt: {}\nDestination pulses: {} | channels {}/{}\nSettling remaining: {} us\n",
+                servos.state,
+                if self.stale { " (stale snapshot)" } else { "" },
+                servos.simulated.pan.degrees(), servos.simulated.tilt.degrees(),
+                servos.requested.map_or_else(|| "none".into(), |position| format!("{:.2}/{:.2} deg", position.pan.degrees(), position.tilt.degrees())),
+                servos.requested_pulses.map_or_else(|| "none".into(), |pulses| format!("{}/{} us (not sent)", pulses.pan.microseconds(), pulses.tilt.microseconds())),
+                servos.pan_channel, servos.tilt_channel, servos.settling_remaining_us,
+            ));
+        }
         text.push_str(&format!("System: {:?}\nAim: {:?}\nLast request: {}\nProcessed {} | dropped {}\nAcquired {} | lost {} | reacquired {}\nLockouts {} | issued {} | suppressed {}\n",s.system,s.aim_status,s.aim.map_or_else(||"unavailable".into(),|aim|format!("{} at {:.1},{:.1}",if aim.issued {"ISSUED VIRTUAL"}else{"SUPPRESSED"},aim.request.predicted_pixel.x(),aim.request.predicted_pixel.y())),c.processed_frames,c.dropped_frames,c.acquired_targets,c.lost_targets,c.reacquisitions,c.lockouts,c.issued_aims,c.suppressed_aims));
         text.push_str(&format!("Safety backend: {}\n", s.safety_backend));
         if let telemetry::AimStatus::WaitingVirtual {

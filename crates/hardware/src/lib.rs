@@ -1,4 +1,5 @@
 #![forbid(unsafe_code)]
+pub mod pca9685;
 use aiming::{AimRecord, AimRequest, AimingDevice, AimingError};
 use fly_core::FrameTimestamp;
 use safety::SafetyAuthority;

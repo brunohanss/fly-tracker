@@ -1,5 +1,13 @@
 # Implementation status
 
+## PCA9685 preparation update: 8 October 2026
+
+[Servo milestone 2](pca9685-mock-adapter.md) adds a PCA9685 adapter with an in-memory I2C register model. It checks board configuration and pulse conversion, writes both servo channels in one transaction, verifies register readback, and tests inhibition, stale evidence, partial transactions, and latched faults. No physical transport is implemented. Replay composition is unchanged. Real board commissioning, live safety evidence, and independent physical inhibition remain open.
+
+## Servo preparation update: 8 October 2026
+
+The user selected a two-axis MG995 pan/tilt assembly and one PCA9685 module. [Servo milestone 1](pan-tilt-simulation.md) adds opt-in validated profiles, typed positions and pulse widths, deterministic movement and settling, safety cancellation, and dashboard positions. This is a simulation path. The physical adapter remains disabled. The power supply, real servo limits, physical calibration, and live safety validation remain open. The status below records the earlier replay work.
+
 Date: 7 October 2026. Scope: software replay and virtual aiming. Hardware is not selected. Physical output is disabled. NanoNet image detection is assigned to a separate agent.
 
 The later [stationary-target change and tests](repeated-image-test.md) add local spatial contrast to the detector. Performance figures below describe the earlier motion-only implementation; use new benchmark results for the current code.
@@ -90,6 +98,10 @@ The final 300-frame slow-fly run issued 297 virtual commands and zero unsafe com
 Repeat the benchmark with `cargo run --release -p app --example pipeline_benchmark`.
 
 ## Remaining product work
+
+### Servo commissioning tools — 2026-10-08
+
+The [offline servo commissioning tools](servo-commissioning.md) provide bounded single-axis jogs, settled observations under replay safety authorization, profile-bound versioned samples, homography fitting, and separate held-out validation in pixels. Reports cannot authorize physical output. Mapping rejects points outside the sampled region and mismatched assembly, camera, or profile bindings. Four regression tests cover movement, safety, fitting, bindings, and report storage. The example has four fit points and two validation points with maximum synthetic error below 2e-14 pixels. Host fit P50/P95/P99/maximum: 1.800/1.800/1.900/5.200 microseconds over 1000 fits. Live point acquisition, nonlinear grid fitting, and replay integration remain open. This step does not complete M10 or M11.
 
 | Area | Required next work |
 |---|---|
